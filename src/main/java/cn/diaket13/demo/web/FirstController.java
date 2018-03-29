@@ -17,14 +17,14 @@ public class FirstController {
     @Value("${data.string1}")
     private String s1;
 
-    @Value("data.string")
+    @Value("${information.name}")
     private String s2;
 
     @Value("${data.boolean1}")
     private boolean b1;
     @Autowired
     private FirstBean firstBean;
-    @Resource
+    @Autowired
     private SecondBean secondBean;
 
     @RequestMapping("111")

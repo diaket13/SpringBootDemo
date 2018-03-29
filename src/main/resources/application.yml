@@ -6,3 +6,9 @@ information:
   一根折断的树枝,看起来随处可见.
   "丢了吧,毫无用处"
   ----独孤求胜
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.143.225.21:3306/fpw?useUnicode=true&characterEncoding=utf-8
+    username: fpw
+    password: 2jKmcPn3
