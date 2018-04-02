@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.diaket13.demo.mapper.xml.DemoMapper">
+    <sql id="Base_Column_List">
+        ID, NAME, ATTACK, TYPE, DESCRIPTION
+    </sql>
     <select id="getById" resultType="demoDO" parameterType="integer">
         select
+        <include refid="Base_Column_List"/>
+        FROM DEMO
+        WHERE ID = #{id}
     </select>
+    <select id="getByInfo" resultType="demoDO" parameterType="demoDO">
+        select
+        <include refid="Base_Column_List"/>
+        FROM DEMO
+        <where>
+            <if test="name != null">AND NAME = #{name}</if>
+            <if test="attack != null">AND ATTACK = #{attack}</if>
+            <if test="type != null">AND TYPE = #{type}</if>
+        </where>
+    </select>
+    <select id="list" resultType="demoDO">
+        SELECT
+            <include refid="Base_Column_List"/>
+        FROM demo
+    </select>
+    <insert id="save" parameterType="demoDO">
+        INSERT INTO
+            DEMO
+            (NAME, ATTACK, TYPE, DESCRIPTION)
+        VALUES
+            (#{name}, #{attack}, #{type}, #{description})
+    </insert>
+    <update id="update" parameterType="demoDO">
+        update DEMO
+        <set>
+            <if test="name != null">NAME = #{name},</if>
+            <if test="attack != null">ATTACK = #{attack},</if>
+            <if test="type != null">TYPE = #{type},</if>
+            <if test="description != null">DESCRIPTION = #{description},</if>
+        </set>
+        where
+        ID = #{id}
+    </update>
+    <delete id="remove">
+        DELETE FROM DEMO
+        WHERE
+            ID = #{id}
+    </delete>
 </mapper>
