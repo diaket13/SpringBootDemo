@@ -1,6 +1,6 @@
-package cn.diaket13.demo.dao;
+package cn.diaket13.demo.dao.jdbc;
 
-import cn.diaket13.demo.bean.SecondBean;
+import cn.diaket13.demo.configuation.SecondBean;
 
 import java.util.List;
 

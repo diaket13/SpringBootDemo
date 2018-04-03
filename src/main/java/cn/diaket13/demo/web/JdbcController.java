@@ -1,7 +1,7 @@
 package cn.diaket13.demo.web;
 
-import cn.diaket13.demo.bean.SecondBean;
-import cn.diaket13.demo.dao.JdbcDAO;
+import cn.diaket13.demo.configuation.SecondBean;
+import cn.diaket13.demo.dao.jdbc.JdbcDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

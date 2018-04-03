@@ -1,7 +1,7 @@
-package cn.diaket13.demo.dao.impl;
+package cn.diaket13.demo.dao.jdbc.impl;
 
-import cn.diaket13.demo.bean.SecondBean;
-import cn.diaket13.demo.dao.JdbcDAO;
+import cn.diaket13.demo.configuation.SecondBean;
+import cn.diaket13.demo.dao.jdbc.JdbcDAO;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

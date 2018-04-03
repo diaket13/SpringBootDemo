@@ -12,6 +12,12 @@ spring:
     url: jdbc:mysql://10.143.225.21:3306/fpw?useUnicode=true&characterEncoding=utf-8
     username: fpw
     password: 2jKmcPn3
+  redis:
+    host: 10.143.129.45
+    port: 6379
+#    sentinel:
+#      master: mymaster
+#    database: 0
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml

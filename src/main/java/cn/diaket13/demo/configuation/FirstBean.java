@@ -1,4 +1,4 @@
-package cn.diaket13.demo.bean;
+package cn.diaket13.demo.configuation;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
