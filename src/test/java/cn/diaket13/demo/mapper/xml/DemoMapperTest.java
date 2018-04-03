@@ -28,7 +28,6 @@ public class DemoMapperTest {
         demoDO.setName("台球杆");
         demoDO.setAttack(2);
         demoMapper.save(demoDO);
-
         Assert.assertEquals((long)3,(long)demoMapper.getByInfo(demoDO).getAttack());
 
     }
